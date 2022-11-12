@@ -8,6 +8,10 @@ Roadmap
 [] Rework state management
 [] Make multi-window mode a bit more stable
 
+## Architecture
+
+@TODO
+
 
 ## Create React App
 
