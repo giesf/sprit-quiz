@@ -12,7 +12,7 @@ Most if not all business logic is happening in the QuizRoot component (shame on 
 
 ### Flow 
 ```mermaid
-graph TD;
+flowchart TD;
     RF[React Frontend] -->|gets deployed to|VSFS[Vercel Static File Storage];
     VCDN[Vercel CDN] -->|caches files from|VSFS[Vercel Static File Storage]; 
     Client -->|Requests frontend and executes it|VCDN[Vercel CDN];
@@ -23,7 +23,7 @@ graph TD;
 ### Components
 
 ```mermaid
-graph LR;
+flowchart LR;
   QR[QuizRoot] --> |Publishes actions and state| QC[QuizContext]
   QC[QuizContext]<-->|Observes state & triggers actions|Comp1
   QC[QuizContext]<-->|Observes state & triggers actions|Comp2
