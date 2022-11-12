@@ -1,6 +1,19 @@
-# Getting Started with Create React App
+# Sprit Quiz
+This is a simple web app to load and present questions from the open trivia db.
+
+Most if not all business logic is happening in the QuizRoot component (shame on me).
+
+Roadmap 
+[] Add sounds
+[] Rework state management
+[] Make multi-window mode a bit more stable
+
+
+## Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
 
 ## Available Scripts
 
