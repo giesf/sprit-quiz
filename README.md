@@ -3,7 +3,7 @@ This is a simple web app to load and present questions from the open trivia db.
 
 Most if not all business logic is happening in the QuizRoot component (shame on me).
 
-Roadmap 
+## Roadmap 
 - [ ] Add sounds
 - [ ] Rework state management
 - [ ] Make multi-window mode a bit more stable
