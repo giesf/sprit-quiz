@@ -4,15 +4,33 @@ This is a simple web app to load and present questions from the open trivia db.
 Most if not all business logic is happening in the QuizRoot component (shame on me).
 
 Roadmap 
-[] Add sounds
-[] Rework state management
-[] Make multi-window mode a bit more stable
+- [ ] Add sounds
+- [ ] Rework state management
+- [ ] Make multi-window mode a bit more stable
 
 ## Architecture
 
-@TODO
+### Flow 
+```mermaid
+graph TD;
+    RF[React Frontend] -->|gets deployed to|VSFS[Vercel Static File Storage];
+    VCDN[Vercel CDN] -->|caches files from|VSFS[Vercel Static File Storage]; 
+    Client -->|Requests frontend and executes it|VCDN[Vercel CDN];
+    Client -->|Requests questions from|OTDB[Open Trivia DB];
+    
+```
 
+### Components
 
+```mermaid
+graph LR;
+  QR[QuizRoot] --> |Publishes actions and state| QC[QuizContext]
+  QC[QuizContext]<-->|Observes state & triggers actions|Comp1
+  QC[QuizContext]<-->|Observes state & triggers actions|Comp2
+  QC[QuizContext]<-->|Observes state & triggers actions|Comp3
+  QC[QuizContext]<-->|Observes state & triggers actions|Comp...n
+
+```
 ## Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
