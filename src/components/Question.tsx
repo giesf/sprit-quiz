@@ -1,6 +1,6 @@
 import { useContext, useMemo } from "react"
 import { Logo } from "./Logo"
-import {useQuizContext} from '../context/Quiz.context'
+import { useQuizContext } from '../context/Quiz.context'
 export const Question: React.FC<{}> = () => {
     const qc = useQuizContext()
 
@@ -9,7 +9,7 @@ export const Question: React.FC<{}> = () => {
 
     return <div style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
         <Logo />
-        <p style={{ marginTop: '8vh', color: '#fff', fontWeight: 'bold', padding: '1vh', border: '0.4vh #fff solid', borderRadius: '100%', fontSize: '2vh' }}>{qc.currentQuestion + "/" + (qc.selectedQuestionSet.length - 1)}</p>
+        <p style={{ marginTop: '8vh', color: '#fff', fontWeight: 'bold', padding: '1vh', border: '0.4vh #fff solid', borderRadius: '100%', fontSize: '2vh' }}>{(qc.currentQuestion + 1) + "/" + (qc.selectedQuestionSet.length)}</p>
         <b style={{ fontSize: '6vh', color: '#fff', maxWidth: '60%', textAlign: 'center', marginBottom: '5vh' }}> {qc.isPaused ? "We'll be right back..." : question}</b>
 
         {!qc.isPaused && <div style={{
